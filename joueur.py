@@ -145,6 +145,11 @@ def choisir_coup(etat_jeu):
     if pion_recu:
         pieces_utilisees.add(pion_recu)
 
+    # === Donne "giveup" si plus aucun coup possible ===
+    if not cases_vides or pion_recu is None and len(toutes_les_pieces() - pieces_utilisees) == 0:
+        log("Plus aucun coup possible, abandon.")
+        return {"response": "giveup"}
+
     score, pos, piece = minimax(board, pieces_utilisees, pion_recu, 2, float("-inf"), float("inf"), True)
 
     if pos is None:
