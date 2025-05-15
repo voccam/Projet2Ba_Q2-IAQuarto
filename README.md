@@ -2,7 +2,7 @@
 
 Cette intelligence artificielle joue au jeu **Quarto** en utilisant une stratégie basée sur l'analyse de l'état du plateau, l'anticipation des coups, et l'évitement des erreurs. Elle a été développée pour participer à un tournoi organisé via un serveur centralisé.
 
-## 🔍 Fonctionnalités principales
+## Fonctionnalités principales
 
 - **Détection automatique d'une victoire** : si l'IA peut gagner en posant la pièce, elle le fait immédiatement.
 - **Stratégie de défense** : évite de donner à l’adversaire une pièce permettant un coup gagnant direct.
@@ -11,7 +11,7 @@ Cette intelligence artificielle joue au jeu **Quarto** en utilisant une stratég
 - **Bonus de position** : encourage l’occupation de positions centrales.
 - **Temps de réponse optimisé** : toutes les décisions sont prises en moins de 5 secondes pour éviter toute pénalité.
 
-## 📁 Arborescence du dépôt
+## Arborescence du dépôt
 
 ```
 .
@@ -22,7 +22,7 @@ Cette intelligence artificielle joue au jeu **Quarto** en utilisant une stratég
 └── docs/             # Documentation complémentaire (exemples, protocole)
 ```
 
-## ⚙️ Dépendances
+## Dépendances
 
 L'IA a été développée et testée sous **Python 3.10**, mais reste compatible avec toute version supérieure ou égale à **Python 3.8**.
 
@@ -34,7 +34,7 @@ python -m pip install -r requirements.txt
 
 > Aucune bibliothèque externe n’est requise par défaut.
 
-## 🚀 Lancement de l’IA
+## Lancement de l’IA
 
 Une fois le serveur de tournoi lancé et prêt :
 
@@ -44,11 +44,11 @@ python joueur.py localhost 3000
 
 > L’IA se connectera automatiquement, s’inscrira, et répondra aux requêtes `ping` et `play`.
 
-## 📤 Protocole de communication
+## Protocole de communication
 
 L’IA utilise un protocole basé sur des requêtes JSON échangées via TCP :
 
-### 🎯 Inscription
+### Inscription
 
 ```json
 {
@@ -64,7 +64,7 @@ L’IA utilise un protocole basé sur des requêtes JSON échangées via TCP :
 - Requête : `{ "request": "ping" }`
 - Réponse : `{ "response": "pong" }`
 
-### 🧠 Coup à jouer
+### Coup à jouer
 
 ```json
 {
@@ -95,7 +95,7 @@ L’IA utilise un protocole basé sur des requêtes JSON échangées via TCP :
 
 > Si aucun coup valable n’est possible, l’IA peut abandonner avec `{ "response": "giveup" }`.
 
-## 🧪 Tests unitaires
+## Tests unitaires
 
 Des tests sont disponibles dans le dossier `tests/`. Pour les exécuter :
 
