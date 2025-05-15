@@ -15,11 +15,13 @@ Cette intelligence artificielle joue au jeu **Quarto** en utilisant une stratég
 
 ```
 .
-├── joueur.py         # Fichier principal contenant l’IA
-├── requirements.txt  # Dépendances (optionnelles)
-├── README.md         # Ce fichier
-├── tests/            # Tests unitaires (logique IA et victoire)
-└── docs/             # Documentation complémentaire (exemples, protocole)
+├── joueur.py            # Fichier principal contenant l’IA Quarto
+├── requirements.txt     # Dépendances nécessaires (optionnelles sauf pour les tests)
+├── README.md            # Présentation de la stratégie IA, installation, et exécution
+├── tests/
+│   └── test_joueur.py   # Tests unitaires : logique de victoire et détection de coup gagnant
+└── docs/
+    └── protocole.md     # (À ajouter si utile) Documentation complémentaire ou explication de l’API
 ```
 
 ## Dépendances
