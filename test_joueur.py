@@ -15,7 +15,7 @@ def full_board():
         "SLER", "BDER", "SLPC", "BDPC"
     ]
 
-# === Tests unitaires ===
+# === Tests unitaires (9/11) ===
 
 def test_is_winning_move_empty(empty_board):
     assert not is_winning_move(empty_board, 0, "BDER")
